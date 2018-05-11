@@ -61,7 +61,7 @@ import{FIREBASE_CONFIG}from "./app.firebase.config"
       name: '__ionic3_start_theme',
         driverOrder: ['indexeddb', 'sqlite', 'websql']
     }),
-    AngularFireModule.initializeApp(FIREBASE_CONFIG)
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
