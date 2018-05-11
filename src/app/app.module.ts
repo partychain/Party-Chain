@@ -1,5 +1,5 @@
 import {NgModule} from "@angular/core";
-import {IonicApp, IonicModule} from "ionic-angular";
+import {IonicApp, IonicModule, Config} from "ionic-angular";
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import {IonicStorageModule} from '@ionic/storage';
@@ -24,8 +24,8 @@ import {SearchLocationPage} from "../pages/search-location/search-location";
 import {TripDetailPage} from "../pages/trip-detail/trip-detail";
 import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
-import {AngularFireModule} from "angularfire2"
-import{FIREBASE_CONFIG}from "./app.firebase.config"
+import {AngularFireModule, FirebaseApp} from "angularfire2"
+
 
 // import services
 // end import services
@@ -51,7 +51,7 @@ import{FIREBASE_CONFIG}from "./app.firebase.config"
   imports: [
     BrowserModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireModule.initializeApp(Config),
     IonicModule.forRoot(MyApp, {
       scrollPadding: false,
       scrollAssist: true,
