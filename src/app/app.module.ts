@@ -25,7 +25,6 @@ import {TripDetailPage} from "../pages/trip-detail/trip-detail";
 import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
 import {AngularFireModule} from "angularfire2"
-import{FIREBASE_CONFIG}from "./app.firebase.config"
 
 // import services
 // end import services
@@ -51,7 +50,6 @@ import{FIREBASE_CONFIG}from "./app.firebase.config"
   imports: [
     BrowserModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(FIREBASE_CONFIG),
     IonicModule.forRoot(MyApp, {
       scrollPadding: false,
       scrollAssist: true,
@@ -60,8 +58,8 @@ import{FIREBASE_CONFIG}from "./app.firebase.config"
     IonicStorageModule.forRoot({
       name: '__ionic3_start_theme',
         driverOrder: ['indexeddb', 'sqlite', 'websql']
-    })
-    
+    }),
+    AngularFireModule.inicializeApp(FIREBASE_CONFIG)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
