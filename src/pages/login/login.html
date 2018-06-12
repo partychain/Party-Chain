@@ -1,4 +1,5 @@
 <!-- -->
+
 <ion-content padding class="animated fadeIn login auth-page">
   <div class="login-content">
 
@@ -14,26 +15,26 @@
     <form class="list-form">
       <ion-item>
         <ion-label floating >
-          <ion-icon name="mail" item-start class="text-primary"></ion-icon >
+          <ion-icon name="mail"  class="text-primary"></ion-icon >
           Email
         </ion-label>
-        <ion-input type="email" ></ion-input>
+        <ion-input  type="email" ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label floating>
-          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+          <ion-icon name="lock" class="text-primary"></ion-icon>
           Password
         </ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password"  ></ion-input>
       </ion-item>
     </form>
 
     <p text-right ion-text  class="text-primary" tappable (click)="forgotPass()"><strong>Forgot Password?</strong></p>
 
     <div >
-      <button ion-button icon-start block color= "dark" class="text-secondary" tappable (click)="login()">
-        <ion-icon name="log-in" class="text-secondary"></ion-icon>
+      <button ion-button icon-start block color= "dark" class="text-md-dark" tappable (click)="login()">
+        <ion-icon name="log-in"></ion-icon>
         SIGN IN
       </button>
 

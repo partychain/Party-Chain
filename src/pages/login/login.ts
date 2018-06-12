@@ -4,13 +4,14 @@ import {HomePage} from "../home/home";
 import {RegisterPage} from "../register/register";
 import { User } from "../../models/user";
 
+
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html'
 })
 export class LoginPage {
 
-  user = {} as User;
+    User = {} as User;
 
   constructor(public nav: NavController, public forgotCtrl: AlertController, public menu: MenuController, public toastCtrl: ToastController) {
     this.menu.swipeEnable(false);

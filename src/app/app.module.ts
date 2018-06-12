@@ -24,9 +24,8 @@ import {SearchLocationPage} from "../pages/search-location/search-location";
 import {TripDetailPage} from "../pages/trip-detail/trip-detail";
 import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
-import {AngularFireModule} from "angularfire2"
-import{FIREBASE_CONFIG}from "./app.firebase.config"
-
+import { AngularFireModule } from 'angularfire2';
+import { FormsModule } from '@angular/forms';
 
 // import services
 // end import services
@@ -34,6 +33,16 @@ import{FIREBASE_CONFIG}from "./app.firebase.config"
 
 // import pages
 // end import pages
+
+export const  FirebaseOptions = {
+  apiKey: "AIzaSyD7x-IJ3ovWVvWxfvM_CdjpwpJui0FTZhc",
+  authDomain: "partychain-9810c.firebaseapp.com",
+  databaseURL: "https://partychain-9810c.firebaseio.com",
+  projectId: "partychain-9810c",
+  storageBucket: "partychain-9810c.appspot.com",
+  messagingSenderId: "57086876132"
+  
+}
 
 @NgModule({
   declarations: [
@@ -61,7 +70,7 @@ import{FIREBASE_CONFIG}from "./app.firebase.config"
       name: '__ionic3_start_theme',
         driverOrder: ['indexeddb', 'sqlite', 'websql']
     }),
-   // AngularFireModule.initializeApp(FIREBASE_CONFIG)
+    AngularFireModule.initializeApp(FirebaseOptions)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
